@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Care</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- chartJS cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+        /* Basic styling for better appearance */
+        #names-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .person {
+            margin-bottom: 20px;
+        }
+        .person img {
+            max-width: 100px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="assets/images/TestLogo.png" alt="">
+
+            <div class="flex gap-4 nav-links">
+                <a> <img src="assets/images/icons/home.svg" alt=""> Overview </a>
+                <a> <img src="assets/images/icons/patients.svg" alt=""> Patients </a>
+                <a> <img src="assets/images/icons/schegule.svg" alt=""> Schedule </a>
+                <a> <img src="assets/images/icons/message.svg" alt=""> Message </a>
+                <a> <img src="assets/images/icons/transaction.svg" alt=""> Transactions </a>
+            </div>
+
+
+            <div class="flex gap-3">
+                <img src="assets/images/senior-woman-doctor.png" alt="">
+                <div>
+                    <h6>Dr. Jose Simmons</h6>
+                    <h6>General Practitioner</h6>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="nav-ico" src="assets/images/icons/settings.svg" alt="">
+                    <img class="nav-ico" src="assets/images/icons/vertical_dots.svg" alt="">
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Names List</h1>
+<div class="flex">
+
+    <ul id="names-list"></ul>
+
+    <div class="content">
+       <div>
+        <h1 id="person-name">Name</h1>
+        <p>Age: <span id="age"></span></p>
+        <p>Date of birth: <span id="dob"></span></p>
+        <p>Gender: <span id="gender"></span></p>
+        <p>Contact: <span id="contact"></span></p>
+        <p>Emergency: <span id="emergency"></span></p>
+        <img id="profile-pic" src="" alt="Profile Picture">
+       </div>
+
+
+       <div class="chart">
+        <canvas id="bloodPressureChart"></canvas>
+       </div>
+
+
+       <div>
+
+        <h1> Diagnostic list </h1>
+        <table class="table-fixed">
+            <thead>
+              <tr>
+                <th>Problem / Diagnosys</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="diagnosis-list">
+            </tbody>
+            
+          </table>
+       </div>
+    </div>
+</div>
+    </main>
+
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
