@@ -74,8 +74,8 @@
         </div>
       </nav>
     </header>
-    <main class="mt-20">
-      <div class="grid sm:grid-cols-1  lg:grid-cols-4">
+    <main class="mt-8">
+      <div class="grid sm:grid-cols-1  lg:grid-cols-4 gap-8">
         <!-- left bar / patients bar -->
         <section class="patients-bar left-section col-span-1 lg:col-span-1">
           <div class="flex justify-between p-5">
@@ -90,7 +90,7 @@
         </section>
 
         <!-- mid section -->
-        <section class="lg:col-span-2" style="width: 766px;">
+        <section class="lg:col-span-2">
           <div class="dygnosys-history-section">
             <h1 class="heading mt-2 mb-5">Diagnosis History</h1>
 
@@ -102,8 +102,9 @@
             </div>
 
             <!-- dygnosys item -->
-            <div class="flex justify-between">
-              <div class="dygnosys-item" style="background-color: #e0f3fa">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-5">
+
+              <div class="dygnosys-item col-span-1" style="background-color: #e0f3fa">
                 <img src="assets/images/respiratory rate.png" alt="" />
                 <div>
                   <h6>Respiratory Rate</h6>
@@ -112,7 +113,7 @@
                 <small id="respiratory-level"></small>
               </div>
 
-              <div class="dygnosys-item" style="background-color: #ffe6e9">
+              <div class="dygnosys-item col-span-1" style="background-color: #ffe6e9">
                 <img src="assets/images/temperature.png" alt="" />
                 <div>
                   <h6>Tempareture</h6>
@@ -121,7 +122,7 @@
                 <small id="temperature-level"></small>
               </div>
 
-              <div class="dygnosys-item" style="background-color: #ffe6f1">
+              <div class="dygnosys-item col-span-1" style="background-color: #ffe6f1">
                 <img src="assets/images/HeartBPM.png" alt="" />
                 <div>
                   <h6>Heart Rate</h6>
@@ -141,10 +142,10 @@
 
           <!-- dignostic list table -->
           <div class="diagnostic-list">
-            <h1 class="heading mb-5">Diagnostic list</h1>
-            <table>
+            <h1 class="heading mt-5 mb-8">Diagnostic list</h1>
+            <table class="w-full">
               <thead class="diagnosys-table-header">
-                <tr>
+                <tr class="p-4">
                   <th>Problem / Diagnosys</th>
                   <th>Description</th>
                   <th>Status</th>
