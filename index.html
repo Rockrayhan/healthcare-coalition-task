@@ -1,111 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Care</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css" />
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- chartJS cdn -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        /* Basic styling for better appearance */
-        #names-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .person {
-            margin-bottom: 20px;
-        }
-        .person img {
-            max-width: 100px;
-            display: block;
-        }
+      /* Basic styling for better appearance */
+      #names-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .person {
+        margin-bottom: 20px;
+      }
+      .person img {
+        max-width: 100px;
+        display: block;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
+    <!-- navbar -->
     <header>
-        <nav>
-            <img src="assets/images/TestLogo.png" alt="">
+      <nav>
+        <img src="assets/images/TestLogo.png" alt="" />
 
-            <div class="flex gap-4 nav-links">
-                <a> <img src="assets/images/icons/home.svg" alt=""> Overview </a>
-                <a> <img src="assets/images/icons/patients.svg" alt=""> Patients </a>
-                <a> <img src="assets/images/icons/schegule.svg" alt=""> Schedule </a>
-                <a> <img src="assets/images/icons/message.svg" alt=""> Message </a>
-                <a> <img src="assets/images/icons/transaction.svg" alt=""> Transactions </a>
-            </div>
+        <div class="flex gap-4 nav-links">
+          <a> <img src="assets/images/icons/home.svg" alt="" /> Overview </a>
+          <a>
+            <img src="assets/images/icons/patients.svg" alt="" /> Patients
+          </a>
+          <a>
+            <img src="assets/images/icons/schegule.svg" alt="" /> Schedule
+          </a>
+          <a> <img src="assets/images/icons/message.svg" alt="" /> Message </a>
+          <a>
+            <img src="assets/images/icons/transaction.svg" alt="" />
+            Transactions
+          </a>
+        </div>
 
-
-            <div class="flex gap-3">
-                <img src="assets/images/senior-woman-doctor.png" alt="">
-                <div>
-                    <h6>Dr. Jose Simmons</h6>
-                    <h6>General Practitioner</h6>
-                </div>
-                <div class="flex items-center gap-2">
-                    <img class="nav-ico" src="assets/images/icons/settings.svg" alt="">
-                    <img class="nav-ico" src="assets/images/icons/vertical_dots.svg" alt="">
-                </div>
-            </div>
-        </nav>
-
+        <div class="flex gap-3">
+          <img src="assets/images/senior-woman-doctor.png" alt="" />
+          <div>
+            <h6 class="font-bold">Dr. Jose Simmons</h6>
+            <h6 class="font-mute">General Practitioner</h6>
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              class="nav-ico"
+              src="assets/images/icons/settings.svg"
+              alt=""
+            />
+            <img
+              class="nav-ico"
+              src="assets/images/icons/vertical_dots.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </nav>
     </header>
+    <main class="mt-20">
+      <div class="flex gap-8">
+        <!-- left bar / patients bar -->
+        <div class="patients-bar">
+          <div class="flex justify-between p-5">
+            <h1 class="heading">patients</h1>
+            <img
+              class="nav-ico"
+              src="assets/images/icons/search_logo.svg"
+              alt=""
+            />
+          </div>
+          <div id="names-list"></div>
+        </div>
 
-    <main>
-        <h1>Names List</h1>
-<div class="flex">
+        <!-- mid section -->
+        <section>
+          <div class="dygnosys-history-section">
+            <h1 class="heading mt-2 mb-5">Diagnosis History</h1>
 
-    <ul id="names-list"></ul>
+            <!-- chart -->
+            <div>
+              <div class="chart">
+                <canvas id="bloodPressureChart"></canvas>
+              </div>
+            </div>
 
-    <div class="content">
-       <div>
-        <h1 id="person-name">Name</h1>
-        <p>Age: <span id="age"></span></p>
-        <p>Date of birth: <span id="dob"></span></p>
-        <p>Gender: <span id="gender"></span></p>
-        <p>Contact: <span id="contact"></span></p>
-        <p>Emergency: <span id="emergency"></span></p>
-        <img id="profile-pic" src="" alt="Profile Picture">
-       </div>
+            <!-- dygnosys item -->
+            <div class="flex justify-between">
+              <div class="dygnosys-item" style="background-color: #e0f3fa">
+                <img src="assets/images/respiratory rate.png" alt="" />
+                <div>
+                  <h6>Respiratory Rate</h6>
+                  <h1 class="dygnosys-item-heading" id="respiratory-rate"></h1>
+                </div>
+                <small id="respiratory-level"></small>
+              </div>
+
+              <div class="dygnosys-item" style="background-color: #ffe6e9">
+                <img src="assets/images/temperature.png" alt="" />
+                <div>
+                  <h6>Tempareture</h6>
+                  <h1 class="dygnosys-item-heading" id="temperature-rate"></h1>
+                </div>
+                <small id="temperature-level"></small>
+              </div>
+
+              <div class="dygnosys-item" style="background-color: #ffe6f1">
+                <img src="assets/images/HeartBPM.png" alt="" />
+                <div>
+                  <h6>Heart Rate</h6>
+                  <h1 class="dygnosys-item-heading" id="heart-rate"></h1>
+                </div>
+                <span class="flex items-center gap-2">
+                  <img
+                    style="height: 20px; width: 10px"
+                    src="assets/images/icons/ArrowDown.svg"
+                    alt=""
+                  />
+                  <small id="heart-level"></small>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- dignostic list table -->
+          <div class="diagnostic-list">
+            <h1 class="heading mb-5">Diagnostic list</h1>
+            <table>
+              <thead class="diagnosys-table-header">
+                <tr>
+                  <th>Problem / Diagnosys</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="diagnosis-list"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- right section -->
+        <section>
+          <div class="profile-content">
+            <div class="flex flex-col items-center">
+              <img id="profile-pic" src="" alt="Profile Picture" />
+              <h1 class="heading mt-3" id="person-name"></h1>
+            </div>
+            <div class="profile-info p-8">
+
+              <div class="flex gap-2">
+                <div class="info-icon">
+                  <img src="assets/images/icons/schegule.svg" alt="">
+                </div>
+                <div>
+                  <span> Date Of Birth </span>
+                  <h6 id="dob"></h6>
+                </div>
+              </div>
+
+              <div class="flex gap-2 my-6">
+                <div class="info-icon">
+                  <img src="assets/images/icons/FemaleIcon.svg" alt="">
+                </div>
+                <div>
+                  <span> Gender </span>
+                  <h6 id="gender"></h6>
+                </div>
+              </div>
+
+              <div class="flex gap-2">
+                <div class="info-icon">
+                  <img src="assets/images/icons/PhoneIcon.svg" alt="">
+                </div>
+                <div>
+                  <span> Contact Info </span>
+                  <h6 id="contact"></h6>
+                </div>
+              </div>
 
 
-       <div class="chart">
-        <canvas id="bloodPressureChart"></canvas>
-       </div>
+              <div class="flex gap-2 my-6">
+                <div class="info-icon">
+                  <img src="assets/images/icons/PhoneIcon.svg" alt="">
+                </div>
+                <div>
+                  <span> Emergency Contacts </span>
+                  <h6 id="emergency"></h6>
+                </div>
+              </div>
 
 
-       <div>
+              <div class="flex gap-2">
+                <div class="info-icon">
+                  <img src="assets/images/icons/InsuranceIcon.svg" alt="">
+                </div>
+                <div>
+                  <span> Insurance Provider </span>
+                  <h6 id="insurance-type"></h6>
+                </div>
+              </div>
 
-        <h1> Diagnostic list </h1>
-        <table class="table-fixed">
-            <thead>
-              <tr>
-                <th>Problem / Diagnosys</th>
-                <th>Description</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="diagnosis-list">
-            </tbody>
-            
-          </table>
-       </div>
-    </div>
-</div>
+              <div class="flex justify-center">
+                <button> <h6> Show All Information </h6> </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- lab Result -->
+          <div class="lab-results">
+            <h1 class="heading my-4">Lab Results</h1>
+
+            <div class="flex justify-between">
+              <span>Blood Test</span>
+              <img src="assets/images/icons/download_logo.svg" alt="" />
+            </div>
+
+            <div class="flex justify-between">
+              <span>Blood Test</span>
+              <img src="assets/images/icons/download_logo.svg" alt="" />
+            </div>
+
+            <div class="flex justify-between">
+              <span>Blood Test</span>
+              <img src="assets/images/icons/download_logo.svg" alt="" />
+            </div>
+
+            <div class="flex justify-between">
+              <span>Blood Test</span>
+              <img src="assets/images/icons/download_logo.svg" alt="" />
+            </div>
+
+            <div class="flex justify-between">
+              <span>Blood Test</span>
+              <img src="assets/images/icons/download_logo.svg" alt="" />
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-
     <script src="assets/script.js"></script>
-</body>
+  </body>
 </html>

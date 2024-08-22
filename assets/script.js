@@ -23,12 +23,18 @@ function fetchAndDisplayData() {
         list.innerHTML = ''; // Clear the list before adding new items
 
         data.forEach((person) => {
-            const listItem = document.createElement('li');
+            const listItem = document.createElement('div');
             listItem.className = 'person';
             listItem.innerHTML = `
+           <div class="flex p-5 gap-3"> 
                 <img src="${person.profile_picture}" alt="${person.name}'s profile picture">
+                <div>  
                 <h3>${person.name}</h3>
-                <p>Gender: ${person.gender}</p>
+                <p>Gender: ${person.gender} ,${person.age} </p>
+                </div>
+                 <img style="height: 17px; width: 16px; margin-left: auto;" src="assets/images/icons/horizontal_dots.svg" alt="logo">
+
+           </div>
             `;
             listItem.addEventListener('click', () => {
                 displayPersonDetails(person);
@@ -46,18 +52,32 @@ function fetchAndDisplayData() {
 
 // Function to display a specific person's details
 function displayPersonDetails(person) {
+    console.log(person);
+    
+    
     document.getElementById('person-name').textContent = person.name;
-    document.getElementById('age').textContent = person.age;
+    // document.getElementById('age').textContent = person.age;
     document.getElementById('dob').textContent = person.date_of_birth;
     document.getElementById('gender').textContent = person.gender;
     document.getElementById('contact').textContent = person.phone_number;
     document.getElementById('emergency').textContent = person.emergency_contact;
     document.getElementById('profile-pic').src = person.profile_picture;
+    document.getElementById('insurance-type').textContent = person.insurance_type;
+    
+    
+    document.getElementById('respiratory-rate').textContent = person?.diagnosis_history[0]?.respiratory_rate?.value + " bpm";
+    document.getElementById('respiratory-level').textContent = person?.diagnosis_history[0]?.respiratory_rate?.levels;
 
+    document.getElementById('temperature-rate').textContent = person?.diagnosis_history[0]?.temperature?.value + " °F";
+    document.getElementById('temperature-level').textContent = person?.diagnosis_history[0]?.temperature?.levels;
+    
+    document.getElementById('heart-rate').textContent = person?.diagnosis_history[0]?.heart_rate?.value + " bpm";
+    document.getElementById('heart-level').textContent = person?.diagnosis_history[0]?.heart_rate?.levels;
+    
     // Populate the diagnosis table
     const diagnosisList = document.getElementById('diagnosis-list');
     diagnosisList.innerHTML = ''; // Clear previous data
-
+    
     person.diagnostic_list.forEach(diagnosis => {
         const row = document.createElement('tr');
         row.innerHTML = `

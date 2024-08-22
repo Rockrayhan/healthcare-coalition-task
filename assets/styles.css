@@ -1,42 +1,194 @@
 body {
-    background: #F6F7F8 0% 0% no-repeat ;
-    margin-left: 18px !important;
-    margin-right: 17px !important;
-    margin-top: 23px !important;
-    color: #072635;
-    font-family: "Manrope", sans-serif;
-
+  background: #f6f7f8 0% 0% no-repeat;
+  margin-left: 18px !important;
+  margin-right: 17px !important;
+  margin-top: 23px !important;
+  color: #072635;
+  font-family: "Manrope", sans-serif;
 }
 
-.text-mute {
-    color: #707070;
+/*  commonly used  */
+.font-mute {
+  color: #707070;
 }
 
 .nav-ico {
-    width: 16px;
-    height: 17px;
+  width: 16px;
+  height: 17px;
+}
+
+.heading {
+  color: #072635;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 nav {
-    border-radius: 70px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-size: 14px;
-    
+  border-radius: 70px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
 }
 
-.nav-links a{
-    display: flex;
-    gap: 9px;
-    align-items: center;
-    font-weight: bold;
+.nav-links a {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-weight: bold;
 }
-.nav-links a img{
-    width: 16px;
-    height: 17px;
-    /* justify-content: space-between; */
+.nav-links a img {
+  width: 16px;
+  height: 17px;
+  /* justify-content: space-between; */
 }
 
+.patients-bar h3 {
+  font-weight: bold;
+}
+.patients-bar p {
+  color: #707070;
+}
+#names-list img {
+  width: 48px;
+  height: 48px;
+}
+
+.patients-bar {
+  background-color: #ffffff;
+  border-radius: 16px;
+  /* padding: 10px; */
+  width: 367px;
+  /* height: 500px; */
+  overflow-y: scroll;
+}
+
+.lab-results {
+  width: 367px;
+  height: 296px;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.lab-results div {
+  margin-top: 5px;
+}
+
+.lab-results img {
+  width: 16px;
+  height: 17px;
+}
+
+/* diagnosys history section */
+
+.dygnosys-history-section {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  padding: 20px;
+}
+
+.dygnosys-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 228px;
+  height: 242px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.dygnosys-item img {
+  width: 96px;
+  height: 96px;
+}
+
+/* chart */
+.chart {
+  width: 726px;
+  height: 298px;
+  background: #f4f0fe 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Dygnosys Item */
+.dygnosys-item-heading {
+  color: #072635;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+/* diagnostic list */
+
+.diagnostic-list {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.diagnostic-list td {
+  padding: 15px;
+}
+
+.diagnosys-table-header {
+  background: #f6f7f8 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  padding: 15px !important;
+}
+
+/* profile */
+
+.profile-content {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  width: 367px;
+  height: 740px;
+  margin-bottom: 32px;
+}
+
+ .info-icon {
+  background-color: #f6f7f8;
+  padding: 15px;
+  border-radius: 50px;
+  width: 42px;
+  height: 42px;
+}
+
+.info-icon img {
+  /* width: 30px ;
+  height: 30px ; */
+
+}
+
+
+.profile-info h6 {
+  font-size: 14px;
+  color: #072635 ;
+  font-weight: bold;
+}
+
+.profile-info span {
+  font-size: 14px;
+}
+
+
+.profile-content button {
+  background-color: #01F0D0;
+  border-radius: 41px;
+  width: 220px;
+  height: 41px;
+  margin-top: 40px;
+
+}
+
+
+#profile-pic {
+  width: 200px;
+  height: 200px;
+  margin-top: 32px;
+}
