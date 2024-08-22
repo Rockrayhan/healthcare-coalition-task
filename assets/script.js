@@ -87,6 +87,24 @@ function displayPersonDetails(person) {
         `;
         diagnosisList.appendChild(row);
     });
+
+
+        // Populate the Lab Results table
+        const labResults = document.getElementById('lab-result');
+        labResults.innerHTML = ''; // Clear previous data
+        
+        person.lab_results.forEach(item => {
+            console.log(item);
+            
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item}   <img style="height: 20px; width: 20px;" src="assets/images/icons/download_logo.svg" alt="logo">  </td>
+       
+            `;
+            labResults.appendChild(row);
+        });
+
+
 }
 
 // Function to display blood pressure chart using Chart.js

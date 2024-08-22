@@ -19,7 +19,7 @@
 
     <style>
       /* Basic styling for better appearance */
-      #names-list {
+      /* #names-list {
         list-style-type: none;
         padding: 0;
       }
@@ -29,7 +29,7 @@
       .person img {
         max-width: 100px;
         display: block;
-      }
+      } */
     </style>
   </head>
   <body>
@@ -40,7 +40,7 @@
 
         <div class="flex gap-4 nav-links">
           <a> <img src="assets/images/icons/home.svg" alt="" /> Overview </a>
-          <a>
+          <a class="active-link">
             <img src="assets/images/icons/patients.svg" alt="" /> Patients
           </a>
           <a>
@@ -75,9 +75,9 @@
       </nav>
     </header>
     <main class="mt-20">
-      <div class="flex gap-8">
+      <div class="grid sm:grid-cols-1  lg:grid-cols-4">
         <!-- left bar / patients bar -->
-        <div class="patients-bar">
+        <section class="patients-bar left-section col-span-1 lg:col-span-1">
           <div class="flex justify-between p-5">
             <h1 class="heading">patients</h1>
             <img
@@ -87,10 +87,10 @@
             />
           </div>
           <div id="names-list"></div>
-        </div>
+        </section>
 
         <!-- mid section -->
-        <section>
+        <section class="lg:col-span-2" style="width: 766px;">
           <div class="dygnosys-history-section">
             <h1 class="heading mt-2 mb-5">Diagnosis History</h1>
 
@@ -156,17 +156,17 @@
         </section>
 
         <!-- right section -->
-        <section>
+        <section class="right-section lg:col-span-1" >
+
           <div class="profile-content">
             <div class="flex flex-col items-center">
               <img id="profile-pic" src="" alt="Profile Picture" />
               <h1 class="heading mt-3" id="person-name"></h1>
             </div>
             <div class="profile-info p-8">
-
               <div class="flex gap-2">
                 <div class="info-icon">
-                  <img src="assets/images/icons/schegule.svg" alt="">
+                  <img src="assets/images/icons/schegule.svg" alt="" />
                 </div>
                 <div>
                   <span> Date Of Birth </span>
@@ -176,7 +176,7 @@
 
               <div class="flex gap-2 my-6">
                 <div class="info-icon">
-                  <img src="assets/images/icons/FemaleIcon.svg" alt="">
+                  <img src="assets/images/icons/FemaleIcon.svg" alt="" />
                 </div>
                 <div>
                   <span> Gender </span>
@@ -186,7 +186,7 @@
 
               <div class="flex gap-2">
                 <div class="info-icon">
-                  <img src="assets/images/icons/PhoneIcon.svg" alt="">
+                  <img src="assets/images/icons/PhoneIcon.svg" alt="" />
                 </div>
                 <div>
                   <span> Contact Info </span>
@@ -194,10 +194,9 @@
                 </div>
               </div>
 
-
               <div class="flex gap-2 my-6">
                 <div class="info-icon">
-                  <img src="assets/images/icons/PhoneIcon.svg" alt="">
+                  <img src="assets/images/icons/PhoneIcon.svg" alt="" />
                 </div>
                 <div>
                   <span> Emergency Contacts </span>
@@ -205,10 +204,9 @@
                 </div>
               </div>
 
-
               <div class="flex gap-2">
                 <div class="info-icon">
-                  <img src="assets/images/icons/InsuranceIcon.svg" alt="">
+                  <img src="assets/images/icons/InsuranceIcon.svg" alt="" />
                 </div>
                 <div>
                   <span> Insurance Provider </span>
@@ -217,42 +215,21 @@
               </div>
 
               <div class="flex justify-center">
-                <button> <h6> Show All Information </h6> </button>
+                <button><h6>Show All Information</h6></button>
               </div>
-
             </div>
           </div>
 
           <!-- lab Result -->
+
           <div class="lab-results">
-            <h1 class="heading my-4">Lab Results</h1>
-
-            <div class="flex justify-between">
-              <span>Blood Test</span>
-              <img src="assets/images/icons/download_logo.svg" alt="" />
-            </div>
-
-            <div class="flex justify-between">
-              <span>Blood Test</span>
-              <img src="assets/images/icons/download_logo.svg" alt="" />
-            </div>
-
-            <div class="flex justify-between">
-              <span>Blood Test</span>
-              <img src="assets/images/icons/download_logo.svg" alt="" />
-            </div>
-
-            <div class="flex justify-between">
-              <span>Blood Test</span>
-              <img src="assets/images/icons/download_logo.svg" alt="" />
-            </div>
-
-            <div class="flex justify-between">
-              <span>Blood Test</span>
-              <img src="assets/images/icons/download_logo.svg" alt="" />
-            </div>
+            <h1 class="heading my-5">Lab Results</h1>
+            <table>
+              <tbody id="lab-result"></tbody>
+            </table>
           </div>
         </section>
+
       </div>
     </main>
 

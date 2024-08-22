@@ -23,6 +23,8 @@ body {
   font-weight: 800;
 }
 
+
+/* ===== navbar ====== */
 nav {
   border-radius: 70px;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -45,6 +47,14 @@ nav {
   /* justify-content: space-between; */
 }
 
+.active-link {
+  background-color: #01F0D0;
+  border-radius: 41px;
+  padding: 10px 15px 10px 15px;
+}
+
+
+/* patients bar */
 .patients-bar h3 {
   font-weight: bold;
 }
@@ -65,12 +75,23 @@ nav {
   overflow-y: scroll;
 }
 
+
+#names-list div:hover {
+  background-color: #D8FCF7;
+  cursor: pointer;
+}
+
+
+
+/* lab results */
+
 .lab-results {
   width: 367px;
   height: 296px;
   border-radius: 16px;
   background: #ffffff;
   padding: 20px;
+  overflow-y: scroll;
 }
 
 .lab-results div {
@@ -80,6 +101,22 @@ nav {
 .lab-results img {
   width: 16px;
   height: 17px;
+}
+
+.lab-results table {
+  width: 100%;
+}
+
+.lab-results td {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+
+.lab-results tr :hover  {
+background-color: #F6F7F8 ;
+cursor: pointer;
 }
 
 /* diagnosys history section */
