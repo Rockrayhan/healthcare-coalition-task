@@ -6,7 +6,66 @@ body {
   color: #072635;
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
+
+/* ============= all scroll bars  ============== */
+
+/* Scrollbar track (background) for body */
+body::-webkit-scrollbar {
+  width: 6px;
+  background: #e3e4e6;
+  border-radius: 3px;
+}
+
+/* Scrollbar handle (foreground) for body */
+body::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+/* Scrollbar hover effect for body */
+body::-webkit-scrollbar-thumb:hover {
+  background: #045167;
+}
+
+
+
+
+/* Scrollbar track (background) for .patients-bar, .diagnostic-list, and .lab-results */
+.patients-bar::-webkit-scrollbar,
+.diagnostic-list::-webkit-scrollbar,
+.lab-results::-webkit-scrollbar {
+  width: 6px;
+  background: #e3e4e6;
+  border-radius: 3px;
+}
+
+/* Scrollbar handle (foreground) for .patients-bar, .diagnostic-list, and .lab-results */
+.patients-bar::-webkit-scrollbar-thumb,
+.diagnostic-list::-webkit-scrollbar-thumb,
+.lab-results::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+/* Scrollbar hover effect for .patients-bar, .diagnostic-list, and .lab-results */
+.patients-bar::-webkit-scrollbar-thumb:hover,
+.diagnostic-list::-webkit-scrollbar-thumb:hover,
+.lab-results::-webkit-scrollbar-thumb:hover {
+  background: #045167;
+}
+
+
+
+
+
+
+
+
+
 
 /*  commonly used  */
 .font-mute {
@@ -23,7 +82,6 @@ body {
   font-size: 24px;
   font-weight: 800;
 }
-
 
 /* ===== navbar ====== */
 nav {
@@ -49,13 +107,22 @@ nav {
 }
 
 .active-link {
-  background-color: #01F0D0;
+  background-color: #01f0d0;
   border-radius: 41px;
   padding: 10px 15px 10px 15px;
 }
 
-
 /* patients bar */
+
+.patients-bar {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow-y: scroll;
+  height: 1054px;
+}
+
+
+
 .patients-bar h3 {
   font-weight: bold;
 }
@@ -67,20 +134,10 @@ nav {
   height: 48px;
 }
 
-.patients-bar {
-  background-color: #ffffff;
-  border-radius: 16px;
-  /* width: 367px; */
-  overflow-y: scroll;
-}
-
-
 #names-list div:hover {
-  background-color: #D8FCF7;
+  background-color: #d8fcf7;
   cursor: pointer;
 }
-
-
 
 /* lab results */
 
@@ -112,10 +169,9 @@ nav {
   padding: 10px;
 }
 
-
-.lab-results tr :hover  {
-background-color: #F6F7F8 ;
-cursor: pointer;
+.lab-results tr :hover {
+  background-color: #f6f7f8;
+  cursor: pointer;
 }
 
 /* diagnosys history section */
@@ -162,8 +218,11 @@ cursor: pointer;
 /* diagnostic list */
 
 .diagnostic-list {
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background-color: #ffffff;
   border-radius: 16px;
+  padding: 10px;
+  height: 349px;
+  overflow-y: scroll;
   padding: 10px;
 }
 
@@ -174,7 +233,7 @@ cursor: pointer;
 .diagnosys-table-header {
   background: #f6f7f8 0% 0% no-repeat padding-box;
   border-radius: 24px;
-  padding: 15px ;
+  padding: 15px;
 }
 
 /* profile */
@@ -187,7 +246,7 @@ cursor: pointer;
   margin-bottom: 32px;
 }
 
- .info-icon {
+.info-icon {
   background-color: #f6f7f8;
   padding: 15px;
   border-radius: 50px;
@@ -198,13 +257,11 @@ cursor: pointer;
 .info-icon img {
   /* width: 30px ;
   height: 30px ; */
-
 }
-
 
 .profile-info h6 {
   font-size: 14px;
-  color: #072635 ;
+  color: #072635;
   font-weight: bold;
 }
 
@@ -212,16 +269,13 @@ cursor: pointer;
   font-size: 14px;
 }
 
-
 .profile-content button {
-  background-color: #01F0D0;
+  background-color: #01f0d0;
   border-radius: 41px;
   width: 220px;
   height: 41px;
   margin-top: 40px;
-
 }
-
 
 #profile-pic {
   width: 200px;
