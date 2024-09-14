@@ -17,63 +17,82 @@
       rel="stylesheet"
     />
 
-    <style>
-      /* Basic styling for better appearance */
-      /* #names-list {
-        list-style-type: none;
-        padding: 0;
-      }
-      .person {
-        margin-bottom: 20px;
-      }
-      .person img {
-        max-width: 100px;
-        display: block;
-      } */
-    </style>
   </head>
   <body>
     <!-- navbar -->
-    <header>
-      <nav>
-        <img src="assets/images/TestLogo.png" alt="" />
-
-        <div class="flex gap-4 nav-links">
-          <a> <img src="assets/images/icons/home.svg" alt="" /> Overview </a>
-          <a class="active-link">
-            <img src="assets/images/icons/patients.svg" alt="" /> Patients
+    <header class="bg-white p-4 shadow-md">
+      <nav class="flex justify-between items-center">
+        <!-- Logo -->
+        <img src="assets/images/TestLogo.png" alt="Logo" class="" />
+    
+        <!-- Hamburger Menu Button (Visible on Mobile) -->
+        <button id="menu-btn" class="block lg:hidden text-gray-500 focus:outline-none">
+          <img src="assets/images/icons/horizontal_dots.svg" alt="Menu" class="w-6 h-6" />
+        </button>
+    
+        <!-- Navigation Links (Hidden on mobile, shown on larger screens) -->
+        <div id="nav-links" class="hidden lg:flex gap-6 items-center">
+          <a class="flex items-center gap-2 font-bold text-gray-700 hover:text-blue-500">
+            <img src="assets/images/icons/home.svg" alt="Home" class="w-4 h-4" /> Overview
           </a>
-          <a>
-            <img src="assets/images/icons/schegule.svg" alt="" /> Schedule
+          <a class="flex items-center gap-2 font-bold text-gray-700 hover:text-blue-500 active-link">
+            <img src="assets/images/icons/patients.svg" alt="Patients" class="w-4 h-4" /> Patients
           </a>
-          <a> <img src="assets/images/icons/message.svg" alt="" /> Message </a>
-          <a>
-            <img src="assets/images/icons/transaction.svg" alt="" />
-            Transactions
+          <a class="flex items-center gap-2 font-bold text-gray-700 hover:text-blue-500">
+            <img src="assets/images/icons/schegule.svg" alt="Schedule" class="w-4 h-4" /> Schedule
+          </a>
+          <a class="flex items-center gap-2 font-bold text-gray-700 hover:text-blue-500">
+            <img src="assets/images/icons/message.svg" alt="Message" class="w-4 h-4" /> Message
+          </a>
+          <a class="flex items-center gap-2 font-bold text-gray-700 hover:text-blue-500">
+            <img src="assets/images/icons/transaction.svg" alt="Transactions" class="w-4 h-4" /> Transactions
           </a>
         </div>
-
-        <div class="flex gap-3">
-          <img src="assets/images/senior-woman-doctor.png" alt="" />
+    
+        <!-- Profile Info (Hidden on mobile, shown on larger screens) -->
+        <div id="profile-info" class="hidden lg:flex items-center gap-3">
+          <img src="assets/images/senior-woman-doctor.png" alt="Profile" class="w-10 h-10 rounded-full" />
           <div>
-            <h6 class="font-bold">Dr. Jose Simmons</h6>
-            <h6 class="font-mute">General Practitioner</h6>
+            <h6 class="font-bold text-gray-700">Dr. Jose Simmons</h6>
+            <h6 class="text-gray-500">General Practitioner</h6>
           </div>
           <div class="flex items-center gap-2">
-            <img
-              class="nav-ico"
-              src="assets/images/icons/settings.svg"
-              alt=""
-            />
-            <img
-              class="nav-ico"
-              src="assets/images/icons/vertical_dots.svg"
-              alt=""
-            />
+            <img class="w-5 h-5" src="assets/images/icons/settings.svg" alt="Settings" />
+            <img class="w-5 h-5" src="assets/images/icons/vertical_dots.svg" alt="Menu" />
           </div>
         </div>
       </nav>
+    
+      <!-- Mobile Menu (Hidden by default) -->
+      <div id="mobile-menu" class="lg:hidden hidden flex-col gap-4 mt-4">
+        
+        <a class="flex items-center gap-2 font-bold text-gray-700">
+          <img src="assets/images/icons/home.svg" alt="Home" class="w-4 h-4" /> Overview
+        </a>
+        <a class="flex items-center gap-2 font-bold text-gray-700 active-link">
+          <img src="assets/images/icons/patients.svg" alt="Patients" class="w-4 h-4" /> Patients
+        </a>
+        <a class="flex items-center gap-2 font-bold text-gray-700">
+          <img src="assets/images/icons/schegule.svg" alt="Schedule" class="w-4 h-4" /> Schedule
+        </a>
+        <a class="flex items-center gap-2 font-bold text-gray-700">
+          <img src="assets/images/icons/message.svg" alt="Message" class="w-4 h-4" /> Message
+        </a>
+        <a class="flex items-center gap-2 font-bold text-gray-700">
+          <img src="assets/images/icons/transaction.svg" alt="Transactions" class="w-4 h-4" /> Transactions
+        </a>
+    
+        <!-- Mobile Profile Info -->
+        <div class="flex items-center gap-3 mt-4">
+          <img src="assets/images/senior-woman-doctor.png" alt="Profile" class="w-10 h-10 rounded-full" />
+          <div>
+            <h6 class="font-bold text-gray-700">Dr. Jose Simmons</h6>
+            <h6 class="text-gray-500">General Practitioner</h6>
+          </div>
+        </div>
+      </div>
     </header>
+    
     <main class="mt-8">
       <div class="grid grid-cols-4 gap-8">
 
@@ -236,5 +255,8 @@
     </main>
 
     <script src="assets/script.js"></script>
+
+
+   
   </body>
 </html>

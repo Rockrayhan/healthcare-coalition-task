@@ -199,3 +199,10 @@ function displayBloodPressureChart(diagnosisHistory) {
 
 // Fetch and display data when the page loads
 fetchAndDisplayData();
+
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});

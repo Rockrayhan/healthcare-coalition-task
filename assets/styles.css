@@ -11,21 +11,21 @@ body {
 
 /* ============= all scroll bars  ============== */
 
-/* Scrollbar track (background) for body */
+/* body */
 body::-webkit-scrollbar {
   width: 6px;
   background: #e3e4e6;
   border-radius: 3px;
 }
 
-/* Scrollbar handle (foreground) for body */
+
 body::-webkit-scrollbar-thumb {
   background: #072635;
   border-radius: 3px;
   opacity: 1;
 }
 
-/* Scrollbar hover effect for body */
+
 body::-webkit-scrollbar-thumb:hover {
   background: #045167;
 }
@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
-/* Scrollbar track (background) for .patients-bar, .diagnostic-list, and .lab-results */
+/* content */
 .patients-bar::-webkit-scrollbar,
 .diagnostic-list::-webkit-scrollbar,
 .lab-results::-webkit-scrollbar {
@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 3px;
 }
 
-/* Scrollbar handle (foreground) for .patients-bar, .diagnostic-list, and .lab-results */
+
 .patients-bar::-webkit-scrollbar-thumb,
 .diagnostic-list::-webkit-scrollbar-thumb,
 .lab-results::-webkit-scrollbar-thumb {
@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb:hover {
   opacity: 1;
 }
 
-/* Scrollbar hover effect for .patients-bar, .diagnostic-list, and .lab-results */
+
 .patients-bar::-webkit-scrollbar-thumb:hover,
 .diagnostic-list::-webkit-scrollbar-thumb:hover,
 .lab-results::-webkit-scrollbar-thumb:hover {
@@ -83,16 +83,26 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 800;
 }
 
+
+
+
 /* ===== navbar ====== */
-nav {
+
+header{
   border-radius: 70px;
+}
+
+nav {
+  
   background: #ffffff 0% 0% no-repeat padding-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  /* padding: 10px;    */
   font-size: 14px;
 }
+
+
 
 .nav-links a {
   display: flex;
@@ -111,6 +121,9 @@ nav {
   border-radius: 41px;
   padding: 10px 15px 10px 15px;
 }
+
+
+
 
 /* patients bar */
 
