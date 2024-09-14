@@ -5,6 +5,7 @@ body {
   margin-top: 23px !important;
   color: #072635;
   font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
 }
 
 /*  commonly used  */
